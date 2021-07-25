@@ -1,0 +1,112 @@
+/*EXERCICI 1 - Desktop*/
+* {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.parent {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*HEADER*/
+.header{
+    background: #000000;
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .menu {
+        background: #27394e;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+        .logo {
+            background: #ea584b;
+            flex: 1 1 auto;
+        }
+        .nav {
+            background: #ea584b;
+            flex: 5 1 auto;
+        }
+        .search {
+            background: #ea584b;
+            flex: 1 1 auto;
+        }
+    .banner-principal {
+        background: #f0763a;
+    }
+        h1 {
+            background: #ffcc5e;
+        }
+
+/*CONTENT*/
+.content {
+    background: #000000;
+    display: flex;
+}
+    .articles {
+        background: #44465e;
+        flex: 2 1 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+        .article{
+            background: #1664a4;
+            flex: 1 1 40%;
+        }
+        .articles-nav {
+            background: #6399bb;
+            flex: 1 1 100%;
+        }
+    .secondary {
+        background: #f94c47;
+        flex: 1 1 auto;
+    }
+        .adv {
+            background: #ffe380;
+        }
+
+/*FOOTER*/
+.footer {
+    background: #000000;
+}
+    .footer-nav {
+        background: #e4a434;
+    }
+
+/*EXERCICI 2 - Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content{
+        background: #ffff00;
+        flex-flow: column nowrap;
+    }
+}
+
+/*EXERCICI 3 - Mobile*/
+@media (max-width: 767px) {
+    .menu {
+        flex-flow: column nowrap;
+    }
+
+    .content{
+        background: #ffd939;
+        flex-flow: column nowrap;
+    }
+    .articles {
+        background: #004763;
+        flex-flow: column nowrap;
+    }
+    .article {
+        background: #558991;
+    }
+    .articles-nav {
+        background: #97d4c5;
+    }
+    .secondary {
+        background: #ff784c;
+    }
+    .adv {
+        background: #ffab64;
+    }
+}

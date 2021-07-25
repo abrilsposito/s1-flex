@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.parent {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*HEADER*/
+.header{
+    background: url(../images/cabecera.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+    .menu {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 25px;        
+    }
+    .menu li {
+        list-style-type: none;
+        font-weight: 500;
+    }
+    .menu a {
+        text-decoration: none;
+        color: #8f8f8f;
+    }
+    .menu i {
+        margin: 10px;
+    }
+
+        .logo {
+            flex: 1 1 auto;
+        }
+            .logo img {
+                width: 75px;
+            }
+
+        .nav {
+            flex: 5 1 auto;
+        }
+            .nav ul {
+                display: flex;
+            }
+            .nav li {
+                margin: 10px;
+            }
+            .nav a:hover {
+                color: #ff7f50;
+            }
+
+        .social {
+            flex: 1 1 auto;
+        }
+            .social li {
+                padding: 5px;
+            }
+
+    .banner-principal {
+        background: rgba(0, 0, 0, .1);
+        margin: 25px;
+    }
+
+        h1 {
+            color: rgba(255, 127, 80, .7);
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin: 40px;
+            font-size: 32px;
+        }
+
+/*CONTENT*/
+.content {
+    background-color: #c4c4c4;
+    padding: 20px;
+}
+    .articles {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+        .article {
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin: 5px;
+            flex: 1 1 45%;
+        }
+            .info-principal {
+                position: relative;
+            }
+            .info-principal img {
+                width: 100%;
+            }
+            .info-principal h3 {
+                color: white;
+                position: absolute;
+                bottom: 35px;
+                left: 10px;
+            }
+            .info-principal h2 {
+                color: white;
+                font-weight: 800;
+                position: absolute;
+                bottom: -6px;
+                left: 10px;
+            }
+            .info-principal div {
+                background-color: #f94c47;
+                height: 39px;
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+            }
+            
+        .article p {
+            font-weight: 500;
+            color: #383838;
+            margin: 15px;
+        }
+        .article a {
+            text-decoration: none;
+            font-weight: 500;
+            color:#868686;
+            margin-left: 15px;
+        }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu {
+        flex-flow: column nowrap;
+        padding-bottom: 10px;;
+    }
+        .nav i {
+            display: none;
+        }
+        .social ul {
+            display: flex;
+        }
+    .banner-principal {
+        margin-top: 0px;
+    }
+}

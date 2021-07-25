@@ -1,0 +1,211 @@
+/*EXERCICI 1 - Desktop*/
+* {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header header header header"
+      "content content content content content content"
+      "footer footer footer footer footer footer";
+  }
+  
+  .header {
+    background: #000000;  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "menu menu menu"
+      "banner-principal banner-principal banner-principal";
+    grid-area: header;
+  }
+  
+  .menu {
+    background: #27394e;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo menu-nav social";
+    grid-area: menu;
+  }
+  
+  .logo { 
+      grid-area: logo;
+      background: #ea584b;
+    }
+  
+  .menu-nav { 
+    grid-area: menu-nav;
+    background: #ea584b;
+    }
+  
+  .social {
+    grid-area: social;
+    background: #ea584b;
+    }
+  
+  .banner-principal {
+    background: #f0763a;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "h1 h1 h1";
+    grid-area: banner-principal;
+  }
+  
+  .h1 {
+    grid-area: h1;
+    background: #ffcc5e;
+  }
+  
+  .content {
+    background: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "articles articles articles articles aside aside";
+    grid-area: content;
+  }
+  
+  .articles {
+    background: #44465e;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "article1 article1 article2 article2"
+      "article3 article3 article4 article4"
+      "articles-nav articles-nav articles-nav articles-nav";
+    grid-area: articles;
+  }
+  
+  .articles-nav { grid-area: articles-nav; background: #6399bb;}
+  
+  .article1 { grid-area: article1; background: #1664a4;}
+  
+  .article2 { grid-area: article2; background: #1664a4;}
+  
+  .article3 { grid-area: article3; background: #1664a4;}
+  
+  .article4 { grid-area: article4; background: #1664a4;}
+  
+  .aside {
+    background: #f94c47;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "adv1"
+      "adv2";
+    grid-area: aside;
+  }
+  
+  .adv1 { grid-area: adv1; background: #ffe380;}
+  
+  .adv2 { grid-area: adv2; background: #ffe380;}
+  
+  .footer {
+    background: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "footer-nav footer-nav footer-nav";
+    grid-area: footer;
+  }
+  
+  .footer-nav { grid-area: footer-nav; background: #e4a434;}
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+      grid-template-rows: 0.5fr 1fr 0.25fr;
+    }
+
+    .content {
+      background: #ffff00;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0.5fr;
+      grid-template-areas:
+        "articles articles articles articles articles articles"
+        "aside aside aside aside aside aside";
+    }
+
+    .aside {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "adv1 adv1 adv1 adv1 adv1 adv1"
+        "adv2 adv2 adv2 adv2 adv2 adv2";
+    }
+
+  }
+
+  @media (max-width: 767px) {
+
+    .container {
+      grid-template-rows: 0.25fr 1fr 0.1fr;
+    }
+
+    .header {
+      grid-template-rows: 1fr 0.5fr;
+    }
+
+    .menu {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "logo logo logo"
+        "menu-nav menu-nav menu-nav"
+        "social social social";
+    }
+
+    .content {
+      background: #ffff00;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0.5fr;
+      grid-template-areas:
+        "articles articles articles articles articles articles"
+        "aside aside aside aside aside aside";
+    }
+    
+    .articles {
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "article1 article1 article1 article1"
+        "article2 article2 article2 article2"
+        "article3 article3 article3 article3"
+        "article4 article4 article4 article4"
+        "articles-nav articles-nav articles-nav articles-nav";
+    }
+        
+    .aside {
+      grid-template-rows: 1fr 1fr;
+    }
+
+  }
